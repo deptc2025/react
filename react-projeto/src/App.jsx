@@ -5,7 +5,7 @@ import Profile from "./components/Profile"
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className="container">
 
         <Profile/>
