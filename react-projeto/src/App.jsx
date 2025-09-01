@@ -1,6 +1,5 @@
 import "./index.css";
 import Profile from "./components/Profile"
-import imagwm from './assets/imagwm.jpeg';
 // o primeiro profile se refere ao nome da função, e o segundo ao nome do componente
 
 
@@ -57,7 +56,7 @@ export default function App() {
           </a>
 
           <a
-            href="https://www.sigo.pr.gov.br/cidadao/3131"
+            href="https://araruna-saudetransparente.ids.inf.br/saudetransparente/"
             target="_blank"
             className="link-item"
           >
@@ -145,6 +144,44 @@ export default function App() {
               <div className="link-text">
                 <h3 className="link-title">Terra nua</h3>
                 <p className="link-description">ITR</p>
+              </div>
+
+              <div className="link-arrow">→</div>
+            </div>
+          </a>
+
+          <a
+            href="https://araruna-saudetransparente.ids.inf.br/saudetransparente/"
+            target="_blank"
+            className="link-item"
+          >
+            <div className="link-content">
+              <div className="link-icon">
+                <img src="https://img.icons8.com/?size=48&id=112762&format=png" alt="" />
+              </div>
+
+              <div className="link-text">
+                <h3 className="link-title">Saúde transparente</h3>
+                <p className="link-description">Visite o site</p>
+              </div>
+
+              <div className="link-arrow">→</div>
+            </div>
+          </a>
+
+          <a
+            href="https://instagram.com/saude.araruna"
+            target="_blank"
+            className="link-item"
+          >
+            <div className="link-content">
+              <div className="link-icon">
+                <img src="https://img.icons8.com/?size=48&id=85154&format=png" alt="" />
+              </div>
+
+              <div className="link-text">
+                <h3 className="link-title">Instagrans</h3>
+                <p className="link-description">Visite</p>
               </div>
 
               <div className="link-arrow">→</div>
