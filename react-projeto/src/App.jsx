@@ -180,14 +180,14 @@ export default function App() {
               </div>
 
               <div className="link-text">
-                <h3 className="link-title">Instagrans</h3>
+                <h3 className="link-title">Páginas da prefeitura</h3>
                 <p className="link-description">Visite</p>
               </div>
 
               <div className="link-arrow">→</div>
             </div>
           </a>
-          
+
         </div>
       </div>
     </div>
