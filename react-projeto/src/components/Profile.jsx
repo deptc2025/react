@@ -1,13 +1,15 @@
+
+
 export default function Profile (){
     return (
       <div className="profile">
             <img
-              src="https://github.com/pedrohenry12.png"
-              alt="avatar do Rafael"
+              src="https://github.com/deptc2025.png"
+              alt=""
               className="profile-avatar"
             />
-            <h1 className="profile-name">Pedro Henry</h1>
-            <p className="profile-bio">Desenvolvedor de Sistemas</p>
+            <h1 className="profile-name">PREFEITURA DE ARARUNA</h1>
+            <p className="profile-bio">Conheça nossos serviços</p>
           </div>
     )
   }
