@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom"; // 👈 importa BrowserRouter
 // o primeiro profile se refere ao nome da função, e o segundo ao nome do componente
 export default function App() {
   return (
-    <BrowserRouter basename="/nomedapasta">   {/* 👈 envolve toda a aplicação */}
+    <BrowserRouter basename="/react">   {/* 👈 envolve toda a aplicação */}
       <div className="app">
         <div className="container">
           <Profile />
