@@ -103,6 +103,48 @@ body {
   overflow: hidden;
 }
 
+.instagram-label ul{
+  list-style: none !important;
+}
+
+.instagram-label li a{
+  text-decoration: none !important;
+  color: black;
+
+}
+
+.instagram-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid #20259a;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.iconzinho img{
+  width: 17px;
+  height: 17px;
+}
+
+.iconzinho{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  transition: 0.2s;
+}
+
+.iconzinho:hover{
+  scale: 1.02;
+}
+
 .link-item::before {
   content: "";
   position: absolute;

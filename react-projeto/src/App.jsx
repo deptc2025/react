@@ -1,11 +1,18 @@
+import { useState } from "react";
 import "./index.css";
 import Profile from "./components/Profile";
-import { BrowserRouter } from "react-router-dom"; // 👈 importa BrowserRouter
+import { BrowserRouter } from "react-router-dom";
+import Instas from "./components/instas";
+
 
 // o primeiro profile se refere ao nome da função, e o segundo ao nome do componente
 export default function App() {
+  const [mostrarInsta, setmostrarInsta] = useState(false)
+  const handleClick = () => {
+    setmostrarInsta((prev) => !prev); // ao clicar, mostramos o ComponenteB
+  };
   return (
-    <BrowserRouter basename="/react">   {/* 👈 envolve toda a aplicação */}
+    <BrowserRouter basename="/react/">   {/* 👈 envolve toda a aplicação */}
       <div className="app">
         <div className="container">
           <Profile />
@@ -175,9 +182,11 @@ export default function App() {
             </a>
 
             <a
-              href="https://instagram.com/saude.araruna"
+              href="#"
               target="_blank"
               className="link-item"
+              onClick={() => setmostrarInsta(true)}
+              
             >
               <div className="link-content">
                 <div className="link-icon">
@@ -193,6 +202,10 @@ export default function App() {
                 <div className="link-arrow">→</div>
               </div>
             </a>
+            {mostrarInsta && <Instas></Instas>}
+
+           
+            
           </div>
         </div>
       </div>
