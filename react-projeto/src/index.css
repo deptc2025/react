@@ -134,6 +134,22 @@ body {
   height: 17px;
 }
 
+button{
+  background-color: white;
+  color: #20259a;
+  border-radius: 5px;
+  border: 1px solid #20259a;
+  padding: 2px;
+  transition: 0.2s;
+  margin: 5px;
+
+}
+
+button:hover{
+  scale: 1.02;
+  cursor: pointer;
+}
+
 .iconzinho{
   display: flex;
   align-items: center;

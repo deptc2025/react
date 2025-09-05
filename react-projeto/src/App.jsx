@@ -2,15 +2,22 @@ import { useState } from "react";
 import "./index.css";
 import Profile from "./components/Profile";
 import { BrowserRouter } from "react-router-dom";
-import Instas from "./components/instas";
 
 
 // o primeiro profile se refere ao nome da função, e o segundo ao nome do componente
 export default function App() {
-  const [mostrarInsta, setmostrarInsta] = useState(false)
-  const handleClick = () => {
-    setmostrarInsta((prev) => !prev); // ao clicar, mostramos o ComponenteB
-  };
+
+  const [show, setShow] = useState(false);
+
+  function showPaginas() {
+    setShow(true)
+  }
+
+  function killPaginas() {
+    setShow(false)
+  }
+
+
   return (
     <BrowserRouter basename="/react/">   {/* 👈 envolve toda a aplicação */}
       <div className="app">
@@ -60,9 +67,8 @@ export default function App() {
               </div>
             </a>
 
-            {/* BLOCO NOVO QUE VOCÊ MANDOU */}
             <a
-              href="https://araruna-saudetransparente.ids.inf.br/saudetransparente/"
+              href="https://www.sigo.pr.gov.br/cidadao/3131"
               target="_blank"
               className="link-item"
             >
@@ -183,10 +189,11 @@ export default function App() {
 
             <a
               href="#"
-              target="_blank"
               className="link-item"
-              onClick={() => setmostrarInsta(true)}
-              
+              onClick={(e) => {
+                e.preventDefault(); // 🚫 evita abrir o link
+                showPaginas();
+              }}
             >
               <div className="link-content">
                 <div className="link-icon">
@@ -202,10 +209,46 @@ export default function App() {
                 <div className="link-arrow">→</div>
               </div>
             </a>
-            {mostrarInsta && <Instas></Instas>}
+            <div className="instagram-label"
+              style={{ display: show ? "flex" : "none" }}>
+              <ul>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
 
-           
-            
+                /><a href="https://instagram.com/saude.araruna" target="_blank">Saúde</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/edificarscfv" target="_blank">Edificar</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/culturaararuna" target="_blank">Cultura</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/diretoriadeesporteararuna2528k" target="_blank">Esporte</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/agtrabalhadorararuna" target="_blank">Agência do trabalhador</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/educacao.araruna" target="_blank">Educação</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/sala_do_empreendedor_araruna" target="_blank">Sala do empreendedor</a></li>
+                <li className="iconzinho"><img
+                  src="https://img.icons8.com/?size=48&id=85154&format=png"
+                  alt=""
+                /><a href="https://instagram.com/assistenciasocialararuna" target="_blank">Assistência social</a></li>
+                <button onClick={killPaginas}>Fechar</button>
+
+              </ul>
+            </div>
           </div>
         </div>
       </div>
