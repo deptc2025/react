@@ -14,6 +14,58 @@ export default function App() {
     setShow(false);
   }
 
+  // Lista das páginas da prefeitura
+  const paginasPrefeitura = [
+    {
+      href: "https://instagram.com/saude.araruna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Saúde",
+      description: "Instagram da Saúde"
+    },
+    {
+      href: "https://instagram.com/edificarscfv",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Edificar",
+      description: "Instagram do Edificar"
+    },
+    {
+      href: "https://instagram.com/culturaararuna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Cultura",
+      description: "Instagram da Cultura"
+    },
+    {
+      href: "https://instagram.com/diretoriadeesporteararuna2528k",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Esporte",
+      description: "Instagram do Esporte"
+    },
+    {
+      href: "https://instagram.com/agtrabalhadorararuna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Agência do trabalhador",
+      description: "Instagram da Agência do Trabalhador"
+    },
+    {
+      href: "https://instagram.com/educacao.araruna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Educação",
+      description: "Instagram da Educação"
+    },
+    {
+      href: "https://instagram.com/sala_do_empreendedor_araruna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Sala do empreendedor",
+      description: "Instagram da Sala do Empreendedor"
+    },
+    {
+      href: "https://instagram.com/assistenciasocialararuna",
+      icon: "https://img.icons8.com/?size=48&id=85154&format=png",
+      title: "Assistência social",
+      description: "Instagram da Assistência Social"
+    }
+  ];
+
   return (
     <BrowserRouter basename="/react/">
       <div className="app">
@@ -65,11 +117,14 @@ export default function App() {
               </div>
             </a>
 
+            {/* Aba de páginas da prefeitura */}
             <div
               className="instagram-label"
               style={{
                 display: show ? "flex" : "none",
                 position: "relative",
+                flexDirection: "column",
+                width: "100%"
               }}
             >
               <button
@@ -92,104 +147,32 @@ export default function App() {
                   style={{ width: 24, height: 24 }}
                 />
               </button>
-              <ul style={{ marginTop: 32 }}>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
+              <div style={{ marginTop: 32, width: "100%" }}>
+                {paginasPrefeitura.map((pagina, idx) => (
                   <a
-                    href="https://instagram.com/saude.araruna"
+                    key={idx}
+                    href={pagina.href}
                     target="_blank"
+                    className="link-item"
+                    style={{ width: "100%" }}
                   >
-                    Saúde
+                    <div className="link-content">
+                      <div className="link-icon">
+                        <img
+                          src={pagina.icon}
+                          alt=""
+                          className="link-icon"
+                        />
+                      </div>
+                      <div className="link-text">
+                        <h3 className="link-title">{pagina.title}</h3>
+                        <p className="link-description">{pagina.description}</p>
+                      </div>
+                      <div className="link-arrow">→</div>
+                    </div>
                   </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/edificarscfv"
-                    target="_blank"
-                  >
-                    Edificar
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/culturaararuna"
-                    target="_blank"
-                  >
-                    Cultura
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/diretoriadeesporteararuna2528k"
-                    target="_blank"
-                  >
-                    Esporte
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/agtrabalhadorararuna"
-                    target="_blank"
-                  >
-                    Agência do trabalhador
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/educacao.araruna"
-                    target="_blank"
-                  >
-                    Educação
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/sala_do_empreendedor_araruna"
-                    target="_blank"
-                  >
-                    Sala do empreendedor
-                  </a>
-                </li>
-                <li className="iconzinho">
-                  <img
-                    src="https://img.icons8.com/?size=48&id=85154&format=png"
-                    alt=""
-                  />
-                  <a
-                    href="https://instagram.com/assistenciasocialararuna"
-                    target="_blank"
-                  >
-                    Assistência social
-                  </a>
-                </li>
-              </ul>
+                ))}
+              </div>
             </div>
 
             <a
