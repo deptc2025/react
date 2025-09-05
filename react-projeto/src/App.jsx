@@ -99,7 +99,7 @@ export default function App() {
               className="link-item"
               onClick={(e) => {
                 e.preventDefault();
-                showPaginas();
+                setShow((prev) => !prev);
               }}
             >
               <div className="link-content">
