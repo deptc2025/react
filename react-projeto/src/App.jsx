@@ -3,8 +3,6 @@ import "./index.css";
 import Profile from "./components/Profile";
 import { BrowserRouter } from "react-router-dom";
 
-
-// o primeiro profile se refere ao nome da função, e o segundo ao nome do componente
 export default function App() {
 
   const [show, setShow] = useState(false);
@@ -19,7 +17,7 @@ export default function App() {
 
 
   return (
-    <BrowserRouter basename="/react/">   {/* 👈 envolve toda a aplicação */}
+    <BrowserRouter basename="/react/">
       <div className="app">
         <div className="container">
           <Profile />
@@ -191,7 +189,7 @@ export default function App() {
               href="#"
               className="link-item"
               onClick={(e) => {
-                e.preventDefault(); // 🚫 evita abrir o link
+                e.preventDefault(); 
                 showPaginas();
               }}
             >
